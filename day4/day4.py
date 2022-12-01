@@ -3,9 +3,6 @@ import ast
 
 
 file = open('input.txt','r')
-
-# 2 8 14
-
 board = dict()
 count = 0
 
@@ -46,7 +43,7 @@ value_list = list(board.values())
 
 score_value = 0
 
-#winorder = number_index : (score,order)
+#winorder = number_index : (score,order,bingonumber)
 win_order = {}
 order = 0
 for number_index in range(len(numbers)):

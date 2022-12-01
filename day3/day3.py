@@ -4,11 +4,13 @@ gamma = ''
 epsilon =''
 #####0,1
 
-bitcount= [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
+bitcount= []
 
 oxygen =  []
 CO2 = []
 for line in file:
+    if bitcount == []:
+        bitcount = [[0,0]]*len(line.strip())
     for i in range(len(line.strip())):
         bitcount[i][int(line[i])] += 1 
     oxygen.append(line.strip())
